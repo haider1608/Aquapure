@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AquaPure - Contact Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6faf9;
+            color: #062f39;
+        }
+
+        header {
+            background: #062f39;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Logo design */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .drop {
+            font-size: 40px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: #39d9b4;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background: #0b4149;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #39d9b4;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .intro h2 {
+            font-size: 35px;
+        }
+
+        .intro p {
+            color: #557078;
+        }
+
+        .contact-section {
+            display: flex;
+            gap: 30px;
+            padding: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: #e5f7f2;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .contact-info a {
+            color: #087f72;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-link {
+            display: inline-block;
+            background: #062f39;
+            color: white !important;
+            padding: 10px 14px;
+            margin: 5px 2px;
+            border-radius: 20px;
+        }
+
+        .social-link:hover {
+            background: #087f72;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #dce5e3;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            border: 1px solid #cbdad7;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form button {
+            background: #062f39;
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #087f72;
+        }
+
+        footer {
+            background: #062f39;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer .drop {
+            font-size: 25px;
+        }
+
+        @media (max-width: 650px) {
+            .contact-section {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <div class="drop">💧</div>
+            <h1>Aqua<span>Pure</span></h1>
+        </div>
+
+        <p>Pure Water, Better Life</p>
+
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="intro">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you.</p>
+    </div>
+
+    <div class="contact-section">
+
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <p>Have a question about our bottles?</p>
+            <p>Contact us to learn more about AquaPure.</p>
+
+            <h3>Our Email</h3>
+            <p>hello@aquapure.com</p>
+
+            <h3>Our Phone</h3>
+            <p>+44 7000 000000</p>
+
+            <h3>Opening Hours</h3>
+            <p>Monday - Friday</p>
+            <p>9:00 AM - 5:00 PM</p>
+
+            <h3>Follow Us</h3>
+
+            <a class="social-link"
+               href="https://www.instagram.com/YOUR_USERNAME/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a class="social-link"
+               href="https://www.facebook.com/YOUR_PAGE/"
+               target="_blank">
+                Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://wa.me/447000000000"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Send Us a Message</h2>
+
+            <form action="#" method="post">
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message"
+                          placeholder="Write your message here"
+                          required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="drop">💧</div>
+        <h3>AquaPure</h3>
+        <p>Pure Water, Better Life</p>
+        <p>© 2026 AquaPure. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
