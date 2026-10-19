@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AquaPure - Products</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6faf9;
+            color: #062f39;
+        }
+
+        header {
+            background: #062f39;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #0b4149;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #39d9b4;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .banner h1 {
+            font-size: 35px;
+        }
+
+        .banner p {
+            color: #557078;
+        }
+
+        /* Hide radio buttons */
+
+        .filter-input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        /* Category buttons */
+
+        .categories {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .category {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 5px;
+            background: white;
+            color: #087f72;
+            border: 1px solid #39d9b4;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .filter-input:checked + .category {
+            background: #062f39;
+            color: white;
+        }
+
+        /* Products layout */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 25px;
+        }
+
+        .product-card {
+            display: none;
+            background: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #dce5e3;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #087f72;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background: #062f39;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .buy-button:hover {
+            background: #087f72;
+        }
+
+        /* Show selected category */
+
+        #all:checked ~ .products .product-card {
+            display: block;
+        }
+
+        #steel:checked ~ .products .steel {
+            display: block;
+        }
+
+        #everyday:checked ~ .products .everyday {
+            display: block;
+        }
+
+        #sports:checked ~ .products .sports {
+            display: block;
+        }
+
+        #travel:checked ~ .products .travel {
+            display: block;
+        }
+
+        footer {
+            background: #062f39;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .product-card img {
+                height: 160px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AquaPure</h1>
+        <p>Pure Water, Better Life</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="banner">
+        <h1>Our Products</h1>
+        <p>Find the perfect bottle for your everyday life.</p>
+    </div>
+
+    <!-- Category options -->
+
+    <input type="radio" name="filter" id="all"
+           class="filter-input" checked>
+
+    <input type="radio" name="filter" id="steel"
+           class="filter-input">
+
+    <input type="radio" name="filter" id="everyday"
+           class="filter-input">
+
+    <input type="radio" name="filter" id="sports"
+           class="filter-input">
+
+    <input type="radio" name="filter" id="travel"
+           class="filter-input">
+
+    <div class="categories">
+        <label for="all" class="category">All Bottles</label>
+        <label for="steel" class="category">Steel</label>
+        <label for="everyday" class="category">Everyday</label>
+        <label for="sports" class="category">Sports</label>
+        <label for="travel" class="category">Travel</label>
+    </div>
+
+    <!-- Product cards -->
+
+    <div class="products">
+
+        <div class="product-card steel">
+            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=80"
+                 alt="Steel bottle">
+            <h3>Steel Classic</h3>
+            <p>Strong and reusable bottle.</p>
+            <p class="price">£15.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card everyday">
+            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=500&q=80"
+                 alt="Green bottle">
+            <h3>Forest Green</h3>
+            <p>A simple bottle for everyday use.</p>
+            <p class="price">£12.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card everyday">
+            <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=500&q=80"
+                 alt="Blue bottle">
+            <h3>Ocean Blue</h3>
+            <p>Fresh style for daily use.</p>
+            <p class="price">£10.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card everyday">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=500&q=80"
+                 alt="Pink bottle">
+            <h3>Soft Pink</h3>
+            <p>A stylish bottle with a simple design.</p>
+            <p class="price">£11.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card everyday">
+            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=80"
+                 alt="Clear bottle">
+            <h3>Clear Essential</h3>
+            <p>Lightweight and easy to carry.</p>
+            <p class="price">£8.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card sports">
+            <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=500&q=80"
+                 alt="Sports bottle">
+            <h3>Active Sports</h3>
+            <p>Perfect for walking and exercise.</p>
+            <p class="price">£13.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+        <div class="product-card travel">
+            <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=80"
+                 alt="Travel bottle">
+            <h3>Travel Pro</h3>
+            <p>Your useful partner for every trip.</p>
+            <p class="price">£17.99</p>
+            <a href="contact.html" class="buy-button">Buy Now</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 AquaPure. All Rights Reserved.</p>
+        <p>Pure Water, Better Life.</p>
+    </footer>
+
+</body>
+</html>

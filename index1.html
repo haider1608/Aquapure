@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaPure Water Bottle Shop</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6faf9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            color: #103943;
+        }
+
+        header {
+            background-color: #062f39;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: #dcefea;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #078675;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #062f39;
+            text-decoration: underline;
+        }
+
+        /* Welcome section */
+        .welcome {
+            padding: 0;
+            background-color: white;
+        }
+
+        /* Main picture and heading */
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            background-color: #dcefea;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image h2 {
+            position: absolute;
+            top: 15%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            margin: 0;
+            color: white;
+            font-size: 46px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+
+        .welcome-text {
+            padding: 25px 15px;
+        }
+
+        .welcome-text p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #39d9b4;
+            color: #062f39;
+            padding: 12px 22px;
+            border-radius: 5px;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #078675;
+            color: white;
+        }
+
+        /* Features section */
+        .features {
+            padding: 25px 15px;
+        }
+
+        .features h2,
+        .product h2 {
+            color: #078675;
+        }
+
+        .feature-box {
+            display: inline-block;
+            background-color: white;
+            width: 220px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            vertical-align: top;
+            box-shadow: 0 3px 10px rgba(6, 47, 57, 0.08);
+        }
+
+        /* Products section */
+        .product {
+            background-color: #e8f6f1;
+            padding: 30px 15px;
+        }
+
+        .product-box {
+            display: inline-block;
+            background-color: white;
+            width: 220px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            vertical-align: top;
+            box-shadow: 0 3px 10px rgba(6, 47, 57, 0.08);
+        }
+
+        /* Product pictures */
+        .product-box img {
+            width: 180px;
+            height: 150px;
+            object-fit: contain;
+            background-color: #edf5f2;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .price {
+            color: #078675;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Story section */
+        .story {
+            background-color: white;
+            padding: 30px 15px;
+        }
+
+        .story h2 {
+            color: #078675;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #041f28;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #39d9b4;
+            text-decoration: none;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile-friendly design */
+        @media (max-width: 600px) {
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 7px;
+                font-size: 14px;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .hero-image h2 {
+                font-size: 29px;
+                width: 90%;
+                left: 50%;
+            }
+
+            .welcome-text {
+                padding: 20px 15px;
+            }
+
+            .welcome-text p {
+                font-size: 15px;
+            }
+
+            .feature-box,
+            .product-box {
+                width: 90%;
+                max-width: 320px;
+            }
+
+            .product-box img {
+                max-width: 100%;
+            }
+
+            .button {
+                padding: 11px 16px;
+                margin: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💧 AquaPure</h1>
+        <p>Refill, Reuse, Repeat!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Welcome section -->
+    <section class="welcome">
+
+        <div class="hero-image">
+            <img src="main_picture.jpg"
+                 alt="AquaPure Water Bottle">
+
+            <h2>Stay Hydrated. Live Greener!</h2>
+        </div>
+
+        <div class="welcome-text">
+
+            <p>
+                Discover stylish and reusable water bottles
+                for everyday life.
+            </p>
+
+            <p>
+                Choose your favourite bottle and help reduce
+                plastic waste.
+            </p>
+
+            <a class="button" href="products.html">
+                Explore Our Products
+            </a>
+
+            <a class="button" href="about.html">
+                Our Story
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Features section -->
+    <section class="features">
+
+        <h2>Why Choose AquaPure?</h2>
+
+        <div class="feature-box">
+            <h3>♻ Eco-Friendly</h3>
+            <p>Reusable bottles help reduce plastic waste.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>✓ Quality Design</h3>
+            <p>Strong and stylish bottles for everyday use.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>💧 Easy Refills</h3>
+            <p>Carry water wherever you go.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>✦ Modern Style</h3>
+            <p>Choose a design that matches your style.</p>
+        </div>
+
+    </section>
+
+    <!-- Products section -->
+    <section class="product">
+
+        <h2>Our Bottle Collection</h2>
+
+        <p>Choose a bottle that suits your everyday needs.</p>
+
+        <!-- Product 1: Steel Classic -->
+        <div class="product-box">
+            <img src="steel_classic.jpg"
+                 alt="Steel Classic Water Bottle">
+
+            <h3>Steel Classic</h3>
+            <p>Stainless steel design.</p>
+            <p class="price">£15.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 2: Forest Green -->
+        <div class="product-box">
+            <img src="forest_green.jpg"
+                 alt="Forest Green Water Bottle">
+
+            <h3>Forest Green</h3>
+            <p>A fresh everyday design.</p>
+            <p class="price">£12.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 3: Ocean Blue -->
+        <div class="product-box">
+            <img src="ocean_blue.jpg"
+                 alt="Ocean Blue Water Bottle">
+
+            <h3>Ocean Blue</h3>
+            <p>A cool blue design.</p>
+            <p class="price">£10.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 4: Soft Pink -->
+        <div class="product-box">
+            <img src="soft_pink.jpg"
+                 alt="Soft Pink Water Bottle">
+
+            <h3>Soft Pink</h3>
+            <p>A stylish daily bottle.</p>
+            <p class="price">£11.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 5: Clear Essential -->
+        <div class="product-box">
+            <img src="clear_essential.jpg"
+                 alt="Clear Essential Water Bottle">
+
+            <h3>Clear Essential</h3>
+            <p>Simple and minimal.</p>
+            <p class="price">£8.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 6: Active Sports -->
+        <div class="product-box">
+            <img src="active_sports.jpg"
+                 alt="Active Sports Water Bottle">
+
+            <h3>Active Sports</h3>
+            <p>Perfect for active days.</p>
+            <p class="price">£13.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+        <!-- Product 7: Travel Pro -->
+        <div class="product-box">
+            <img src="travel_pro.jpg"
+                 alt="Travel Pro Water Bottle">
+
+            <h3>Travel Pro</h3>
+            <p>Perfect for everyday journeys.</p>
+            <p class="price">£17.99</p>
+            <a class="button" href="products.html">View Product</a>
+        </div>
+
+    </section>
+
+    <!-- Story section -->
+    <section class="story">
+
+        <h2>Refill. Reuse. Repeat.</h2>
+
+        <p>
+            Choose a reusable bottle and help reduce
+            single-use plastic waste.
+        </p>
+
+        <a class="button" href="about.html">Our Mission</a>
+
+        <h2>Your Favourite Bottle Awaits!</h2>
+
+        <p>
+            Explore our collection and find your perfect bottle.
+        </p>
+
+        <a class="button" href="products.html">Shop All Bottles</a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>💧 AquaPure</h2>
+
+        <p>Refill • Reuse • Repeat</p>
+
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </p>
+
+        <p>&copy; 2026 AquaPure. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
