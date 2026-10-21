@@ -1,417 +1,833 @@
 
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AquaPure | About Us</title>
 
+
+
     <style>
+
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
+
 
         body {
+
             font-family: Arial, sans-serif;
+
             color: #103943;
+
             background: #f6faf9;
+
         }
+
+
 
         header {
+
             background: #062f39;
+
             padding: 18px 7%;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             flex-wrap: wrap;
+
             gap: 15px;
+
         }
+
+
 
         .logo {
+
             color: #39d9b4;
+
             font-size: 27px;
+
             font-weight: bold;
+
         }
+
+
 
         nav {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 22px;
+
         }
+
+
 
         nav a {
+
             color: white;
+
             text-decoration: none;
+
             font-size: 14px;
+
             transition: color 0.3s;
+
         }
+
+
 
         nav a:hover,
+
         nav .active {
+
             color: #39d9b4;
+
         }
+
+
 
         .banner {
+
             padding: 75px 8%;
+
             text-align: center;
+
             color: white;
+
             background:
+
                 linear-gradient(90deg,
+
                 rgba(3, 42, 54, 0.92),
+
                 rgba(3, 42, 54, 0.65)),
-                url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=85");
+
+                url("main picture.jpg");
+
             background-size: cover;
+
             background-position: center;
+
         }
+
+
 
         .tag {
+
             color: #39d9b4;
+
             font-size: 13px;
+
             font-weight: bold;
+
             letter-spacing: 3px;
+
         }
+
+
 
         .banner h1 {
+
             font-size: clamp(38px, 5vw, 54px);
+
             margin: 18px 0;
+
         }
+
+
 
         .banner p {
+
             max-width: 650px;
+
             margin: auto;
+
             line-height: 1.8;
+
             color: #e0eeee;
+
         }
+
+
 
         .section {
+
             padding: 65px 8%;
+
         }
+
+
 
         .story {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 45px;
+
             align-items: center;
+
         }
+
+
 
         .story img {
-            width: 100%;
-            height: 350px;
+
+            width: 60%;
+
+            height: 500px;
+
             object-fit: cover;
+
             border-radius: 15px;
+
             box-shadow: 0 10px 25px #062f3918;
+
         }
+
+
 
         h2 {
+
             color: #062f39;
+
             font-size: 32px;
+
             margin: 14px 0;
+
         }
+
+
 
         .story p,
+
         .mission p {
+
             color: #62777b;
+
             line-height: 1.9;
+
             margin: 14px 0;
+
         }
+
+
 
         .btn {
+
             display: inline-block;
+
             background: #39d9b4;
+
             color: #062f39;
+
             padding: 13px 24px;
+
             margin-top: 12px;
+
             border-radius: 30px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: transform 0.3s, background 0.3s;
+
         }
+
+
 
         .btn:hover {
+
             background: #b7f4e4;
+
             transform: translateY(-3px);
+
         }
+
+
 
         .mission {
+
             text-align: center;
+
             background: #e8f6f1;
+
         }
+
+
 
         .mission p {
+
             max-width: 750px;
+
             margin: 15px auto;
+
         }
+
+
 
         .values {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
+
             margin-top: 35px;
+
         }
+
+
 
         .value-card {
+
             background: white;
+
             border: 1px solid #e1ece8;
+
             padding: 30px 22px;
+
             border-radius: 12px;
+
             transition: transform 0.3s, box-shadow 0.3s;
+
         }
+
+
 
         .value-card:hover {
+
             transform: translateY(-7px);
+
             box-shadow: 0 12px 25px #062f3918;
+
         }
+
+
 
         .value-card .symbol {
+
             font-size: 35px;
+
         }
+
+
 
         .value-card h3 {
+
             color: #087f72;
+
             margin: 14px 0;
+
         }
+
+
 
         .value-card p {
+
             color: #62777b;
+
             line-height: 1.7;
+
             font-size: 14px;
+
         }
+
+
 
         .closing {
+
             background: #062f39;
+
             color: white;
+
             text-align: center;
+
             padding: 55px 7%;
+
         }
+
+
 
         .closing h2 {
+
             color: white;
+
         }
+
+
 
         .closing p {
+
             color: #c7dedb;
+
             margin: 15px 0;
+
             line-height: 1.8;
+
         }
+
+
 
         footer {
+
             background: #041f28;
+
             color: white;
+
             text-align: center;
+
             padding: 25px 7%;
+
         }
+
+
 
         footer p {
+
             font-size: 13px;
+
             line-height: 2.2;
+
             color: #c3d7d8;
+
         }
+
+
 
         footer a {
+
             color: #39d9b4;
+
             text-decoration: none;
+
             margin: 0 7px;
+
         }
+
+
 
         @media (max-width: 750px) {
+
             header {
+
                 justify-content: center;
+
             }
+
+
 
             nav {
+
                 justify-content: center;
+
                 gap: 13px;
+
             }
+
+
 
             .story {
+
                 grid-template-columns: 1fr;
+
             }
+
+
 
             .story img {
-                height: 280px;
+
+                height: 250px;
+
             }
+
+
 
             .values {
+
                 grid-template-columns: 1fr;
+
             }
 
+
+
             h2 {
+
                 font-size: 28px;
+
             }
+
         }
+
     </style>
+
 </head>
+
+
 
 <body>
 
+
+
     <header>
+
         <div class="logo">💧 AquaPure.</div>
 
+
+
         <nav>
+
             <a href="index.html">Home</a>
+
             <a href="about.html" class="active">About</a>
+
             <a href="products.html">Products</a>
+
             <a href="gallery.html">Gallery</a>
+
             <a href="contact.html">Contact</a>
+
         </nav>
+
     </header>
 
+
+
     <section class="banner">
+
         <span class="tag">GET TO KNOW AQUAPURE</span>
+
+
 
         <h1>Our Story, Our Purpose</h1>
 
+
+
         <p>
+
             We believe that staying hydrated should be simple,
+
             stylish and part of a better everyday lifestyle.
+
             Welcome to AquaPure.
+
         </p>
+
     </section>
+
+
 
     <section class="section story">
 
+
+
         <div>
+
             <span class="tag">WHO WE ARE</span>
+
+
 
             <h2>More Than Just a Water Bottle</h2>
 
+
+
             <p>
+
                 AquaPure is a reusable water bottle brand
+
                 focused on everyday convenience, modern designs
+
                 and a more responsible way to stay hydrated.
+
             </p>
 
+
+
             <p>
+
                 From stainless steel bottles to colourful
+
                 everyday designs, our collection is made for
+
                 students, workers, travellers and active people.
+
             </p>
 
+
+
             <p>
+
                 We want to make reusable bottles an easy choice
+
                 for everyone. A small change in your daily
+
                 routine can be a positive step towards reducing
+
                 single-use plastic waste.
+
             </p>
+
+
 
             <a href="products.html" class="btn">
+
                 Explore Our Products →
+
             </a>
+
         </div>
+
+
 
         <div>
+
             <img
-                src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85"
+
+                src="forest green.webp"
+
                 alt="Reusable water bottle">
+
         </div>
 
+
+
     </section>
+
+
 
     <section class="section mission">
 
+
+
         <span class="tag">OUR PURPOSE</span>
+
+
 
         <h2>Our Mission</h2>
 
+
+
         <p>
+
             Our mission is to encourage reusable bottle habits
+
             through practical products, attractive designs
+
             and a collection suitable for different lifestyles.
+
             We believe better daily habits begin with simple choices.
+
         </p>
 
+
+
     </section>
+
+
 
     <section class="section">
 
+
+
         <div style="text-align:center;">
+
             <span class="tag">WHAT MATTERS TO US</span>
+
+
 
             <h2>Our Core Values</h2>
 
+
+
             <p style="color:#62777b; line-height:1.8;">
+
                 Three simple values guide our brand.
+
             </p>
+
         </div>
+
+
 
         <div class="values">
 
+
+
             <div class="value-card">
+
                 <div class="symbol">♻️</div>
+
+
 
                 <h3>Sustainability</h3>
 
+
+
                 <p>
+
                     We encourage people to reuse their bottles
+
                     and help reduce dependence on single-use
+
                     plastic products.
+
                 </p>
+
             </div>
 
+
+
             <div class="value-card">
+
                 <div class="symbol">✦</div>
+
+
 
                 <h3>Quality & Style</h3>
 
+
+
                 <p>
+
                     We focus on useful bottle designs,
+
                     attractive colours and products that
+
                     fit everyday routines.
+
                 </p>
+
             </div>
 
+
+
             <div class="value-card">
+
                 <div class="symbol">💧</div>
+
+
 
                 <h3>Everyday Convenience</h3>
 
+
+
                 <p>
+
                     Our goal is to make carrying water
+
                     convenient at college, at work,
+
                     during exercise and while travelling.
+
                 </p>
+
             </div>
+
+
 
         </div>
 
+
+
     </section>
+
+
 
     <section class="closing">
 
+
+
         <span class="tag">REFILL. REUSE. REPEAT.</span>
+
+
 
         <h2>Be Part of the Change</h2>
 
+
+
         <p>
+
             Choose your favourite bottle and make reusable
+
             hydration part of your everyday life.
+
         </p>
 
+
+
         <a href="products.html" class="btn">
+
             Discover Our Collection →
+
         </a>
+
+
 
     </section>
 
+
+
     <footer>
+
+
 
         <div class="logo">💧 AquaPure.</div>
 
+
+
         <p>Refill • Reuse • Repeat</p>
 
+
+
         <p>
+
             <a href="index.html">Home</a> |
+
             <a href="about.html">About</a> |
+
             <a href="products.html">Products</a> |
+
             <a href="gallery.html">Gallery</a> |
+
             <a href="contact.html">Contact</a>
+
         </p>
+
+
 
         <p>© 2026 AquaPure. All Rights Reserved.</p>
 
+
+
     </footer>
 
+
+
 </body>
+
 </html>
